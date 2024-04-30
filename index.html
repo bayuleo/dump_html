@@ -7,18 +7,17 @@
     <h1>Hello, WebView!</h1>
     <h1>Close</h1>
     <button onclick="goBack()">Close</button>
-    <h1>Open New</h1>
+    <h1>Open</h1>
     <button onclick="openLink()">Open</button>
-
     
     <script>
         function goBack() {
             // Send a message to Flutter
-            window.flutter_inappwebview.callHandler('onGoback');
+            window.flutter_inappwebview.callHandler('onGoBack');
         }
         function openLink() {
             // Change the URL to the desired link
-            var link = "https://moccasin-katherina-73.tiiny.site/";
+            var link = "moccasin-katherina-73.tiiny.site";
             // Open the link in the same tab
             window.location.href = link;
         }
