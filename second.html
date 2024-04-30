@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Close WebView</title>
+</head>
+<body>
+    <h1>SECOND, WebView!</h1>
+    <h1>Close</h1>
+    <button onclick="goBack()">Close</button>
+    
+    <script>
+        function goBack() {
+            // Send a message to Flutter
+            window.flutter_inappwebview.callHandler('onGoback');
+        }
+    </script>
+</body>
+</html>
