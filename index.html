@@ -1,26 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Close WebView</title>
-</head>
-<body>
-    <h1>Hello, WebView!</h1>
-    <h1>Close</h1>
-    <button onclick="goBack()">Close</button>
-    <h1>Open New</h1>
-    <button onclick="openLink()">Open</button>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button to Call JS Function</title>
     <script>
-        function goBack() {
-            // Send a message to Flutter
-            window.flutter_inappwebview.callHandler('onGoBack');
-        }
-        function openLink() {
-            // Change the URL to the desired link
-            var link = "https://moccasin-dinnie-73.tiiny.site/";
-            // Open the link in the same tab
-            window.location.href = link;
+        function openNewWindow() s{
+            window.flutter_inappwebview.callHandler('openNewWindow', 'new_url.com');
         }
     </script>
+</head>
+<body>
+    <button onclick="openNewWindow()">Open New Window</button>
 </body>
 </html>
